@@ -17,10 +17,13 @@ st.set_page_config(page_title="Análise de Séries Temporais", layout="wide")
 
 # Título e descrição
 st.title("Análise de Séries Temporais")
-st.markdown("""
-Esta aplicação permite visualizar e analisar séries temporais de volumes de produtos.
-Faça upload do arquivo de dados criptografado e insira a senha para começar.
-""")
+st.info(
+    "🔒 **Segurança dos Dados:**\n"
+    "O arquivo criptografado enviado é utilizado apenas durante a sua sessão. "
+    "Após o processamento, os dados descriptografados são removidos automaticamente. "
+    "Nenhuma informação é armazenada no servidor após o término da sessão.\n\n"
+    "**Importante:** Não compartilhe sua senha de descriptografia com terceiros."
+)
 
 def generate_key(password: str, salt: bytes) -> bytes:
     """Gera uma chave de criptografia a partir de uma senha e salt."""
