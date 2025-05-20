@@ -144,6 +144,10 @@ if uploaded_file is not None:
             # Formatar datas para mês/ano para exibição
             str_index = [d.strftime('%m/%Y') for d in full_index]
             
+            # Opção para escala logarítmica
+            st.subheader("Opções de Visualização")
+            log_y = st.checkbox("Exibir eixo Y em escala logarítmica", value=False)
+            
             # Criar gráfico com Plotly
             fig = go.Figure()
             # Série original
@@ -177,7 +181,8 @@ if uploaded_file is not None:
                     tickmode='array',
                     ticktext=str_index,
                     tickvals=str_index
-                )
+                ),
+                yaxis_type='log' if log_y else 'linear'
             )
             st.plotly_chart(fig, use_container_width=True)
             
