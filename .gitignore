@@ -28,4 +28,40 @@ Thumbs.db
 
 # Arquivos temporários
 *.tmp
-*.temp 
+*.temp
+
+# Ignorar arquivos de dados criptografados
+*.encrypted
+
+# Configurações locais e históricos
+*.local
+*.log
+*.bak
+*.old
+
+# Cache do pip
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Cache do Jupyter
+.ipynb_checkpoints/
+
+# Build
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Credenciais e chaves
+*.key
+*.pem
+*.crt
+*.env.*
+.envrc
+
+# Notebooks temporários
+*.nbconvert.ipynb
+
+# Lock files (opcional)
+Pipfile.lock
+poetry.lock 
