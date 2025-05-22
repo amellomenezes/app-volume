@@ -64,4 +64,12 @@ dist/
 
 # Lock files (opcional)
 Pipfile.lock
-poetry.lock 
+poetry.lock
+
+# Arquivos auxiliares e de documentação
+chatgpt_discussion.md
+encrypt_data.py
+outlier LS V3.py
+outliers via LOWESS.py
+refatoracao_chatgpt.md
+setup_env.ps1 
